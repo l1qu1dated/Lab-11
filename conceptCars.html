@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab11</title>
+</head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<body>
+	<h1>Testing a load function</h1>
+	<div>
+		<img id="img"/>
+	</div>
+	<button id="button">Reload</button>
+
+</body>
+<script>
+	var counter = 0;
+
+
+	$(document).ready(function loaded(){
+		$("#img").attr("src", "./img1.jpg");
+		//document.body.style.backgroundColor = "#001fff";
+		//counter = 1;
+		//anotherload();
+	})
+
+	$("button").click(function() {
+		$("#img").removeAttr("src").attr("src", "./img1.jpg");
+		anotherload();
+
+	})
+
+	function anotherload(){
+		//alert("test");
+		if(counter > 0){
+			document.body.style.backgroundColor = "#ee0000";
+		}else{
+			document.body.style.backgroundColor = "#001fff";
+		}
+		counter++;
+	}
+</script>
+</html>
+
